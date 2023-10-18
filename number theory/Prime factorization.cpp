@@ -32,4 +32,5 @@ int main()
     cout<<d[i]<<"^"<<cnt<<endl;
     i = i+ cnt-1;
   }
+  // cout<<d[i]<<"^"<<cnt<<endl;
 }
