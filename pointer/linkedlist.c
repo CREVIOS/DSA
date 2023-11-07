@@ -11,6 +11,7 @@ struct Node *init(int value)
 {
     struct Node *newnode = NULL;
     newnode = (struct Node *)malloc(sizeof(struct Node));
+    // Initialize the data and next pointer
     newnode->data = value;
     newnode->link = NULL;
     return newnode;
@@ -42,7 +43,7 @@ void delete_it(struct Node **head, int value)
         free(temp);
         return;
     }
-
+    // Search for the node to be deleted, keeping track of the previous node
     while (temp != NULL && temp->data != value)
     {
         prev = temp;
@@ -54,6 +55,8 @@ void delete_it(struct Node **head, int value)
         printf("Element is not in the list\n");
         return;
     }
+
+    // Unlink the node from the linked list
     prev->link = temp->link;
     free(temp);
 }
