@@ -105,6 +105,7 @@ void printlist(struct Node *head)
 }
 void freelist(struct Node *head)
 {
+    //temporary pointer temp to keep track of the current node while freeing the memory.
     struct Node *temp;
     while (head != NULL)
     {
